@@ -1,15 +1,22 @@
-import {Component, signal, Signal} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {HomeData} from '../../models/home.class';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'qt-home.component',
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   template: `
     <h1>{{homeData().title}}</h1>
     <details>
       <summary>{{homeData().publisher}}&#64;{{homeData().version}}</summary>
       <div>{{homeData().description}}</div>
     </details>
+    <p>
+      <a routerLink="/about">about</a><br/>
+      <a routerLink="/node">node</a>
+    </p>
   `,
   styleUrl: './home.component.scss'
 })
