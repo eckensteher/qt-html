@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Nunito Sans Italic';
+  src: url('./assets/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('./assets/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.brand {
+  font-family: 'Nunito Sans Italic', sans-serif;
+  color: lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+.brand p {
+  margin: 0;
+}

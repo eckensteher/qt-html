@@ -1,17 +1,21 @@
-import {Component, signal} from '@angular/core';
-import {HomeData} from '../../models/home.class';
+import {Component, inject, signal} from '@angular/core';
 import {RouterLink} from '@angular/router';
+import {DatePipe} from '@angular/common';
+import {RootDataService} from '../../services/root-data.service';
 
 @Component({
-  selector: 'qt-home.component',
   imports: [
-    RouterLink
+    RouterLink,
+    DatePipe
   ],
   template: `
-    <h1>{{homeData().title}}</h1>
+    <div class="brand">
+      <p>{{rootDataService.rootData().brand}}</p>
+    </div>
+    <h1>{{rootDataService.rootData().title}}</h1>
     <details>
-      <summary>{{homeData().publisher}}&#64;{{homeData().version}}</summary>
-      <div>{{homeData().description}}</div>
+      <summary>{{ today | date }}</summary>
+      <div>{{rootDataService.rootData().description}}</div>
     </details>
     <p>
       <a routerLink="/about">about</a><br/>
@@ -21,10 +25,6 @@ import {RouterLink} from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  homeData = signal<HomeData>({
-    title: "Fragenbogen Demo",
-    publisher: "eckensteher",
-    version: "1.0 2025",
-    description: "Dieser Fragenbaum dient der Demonstration"
-  })
+  rootDataService = inject(RootDataService);
+  today = Date.now();
 }
