@@ -9,7 +9,8 @@ export class LocalizeService {
     "publisherLabel": "Veröffentlicht durch",
     "aboutLinkLabel": "Impressum",
     "emailLabel": "Kontakt E-Mail",
-    "startQuestionsButtonLabel": "Starte Fragenbaum"
+    "startQuestionsButtonLabel": "Starte Fragenbaum",
+    "goHomeButtonLabel": "Zurück zur Startseite"
   };
 
   translate(key: string): string {

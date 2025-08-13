@@ -28,3 +28,19 @@ body {
 .brand p {
   margin: 0;
 }
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid transparent;
+  &-choice {
+    background-color: #039;
+    color: #fff;
+  }
+  &-page {
+    background-color: #f2f2f2;
+    color: #000;
+    border-color: #333;
+    text-decoration-line: none;
+  }
+}
