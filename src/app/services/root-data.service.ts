@@ -1,5 +1,6 @@
 import {Injectable, signal} from '@angular/core';
 import {RootData} from '../models/root-data.interface';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,4 +15,5 @@ export class RootDataService {
     description: "Dieser Fragenbaum dient der Vorbereitung einer ",
     brand: "eckensteher"
   });
+  appTitle = new BehaviorSubject('Fragenbaum');
 }
