@@ -9,10 +9,12 @@ import {RootDataService} from '../../services/root-data.service';
     DatePipe
   ],
   template: `
+    <div class>
+      {{rootDataService.rootData().title}}
+    </div>
     <div class="brand">
       <p>{{rootDataService.rootData().brand}}</p>
     </div>
-    <h1>{{rootDataService.rootData().title}}</h1>
     <details>
       <summary>{{ today | date }}</summary>
       <div>{{rootDataService.rootData().description}}</div>

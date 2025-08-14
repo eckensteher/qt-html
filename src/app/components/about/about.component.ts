@@ -3,14 +3,17 @@ import {RouterLink} from "@angular/router";
 import {RootDataService} from '../../services/root-data.service';
 import {TranslatePipe} from '../../pipes/translate.pipe';
 import {PageButtonDirective} from '../../directives/page-button.directive';
+import {HeaderComponent} from '../header/header.component';
 
 @Component({
   imports: [
     RouterLink,
     TranslatePipe,
-    PageButtonDirective
+    PageButtonDirective,
+    HeaderComponent
   ],
   template: `
+    <qt-header [showHomeLink]="false"></qt-header>
     <div class="brand">
       <p>{{rootDataService.rootData().brand}}</p>
     </div>
